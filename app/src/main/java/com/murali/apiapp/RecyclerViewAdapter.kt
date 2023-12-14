@@ -18,9 +18,9 @@ class RecyclerViewAdapter  : RecyclerView.Adapter<RecyclerViewAdapter.MyViewHold
           this.listData.addAll(listDate)
     }
      class MyViewHolder(binding : RecyclerviewListRowBinding) : RecyclerView.ViewHolder(binding.root){
-         val imageview = binding.imageView
-         val textviewName = binding.textviewName
-         val textviewDescription = binding.textviewDescription
+         private val imageview = binding.imageView
+         private val textviewName = binding.textviewName
+         private val textviewDescription = binding.textviewDescription
 
                fun bind(data : RecyclerData){
                    textviewName.text = data.name
@@ -46,7 +46,7 @@ class RecyclerViewAdapter  : RecyclerView.Adapter<RecyclerViewAdapter.MyViewHold
         return listData.size
     }
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-         holder.bind(listData?.get(position)!!)
+         holder.bind(listData[position])
     }
 }
 
