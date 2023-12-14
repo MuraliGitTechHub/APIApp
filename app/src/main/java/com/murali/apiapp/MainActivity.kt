@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.get
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.murali.apiapp.databinding.ActivityMainBinding
 import com.murali.apiapp.model.RecyclerList
@@ -28,7 +27,6 @@ class MainActivity : AppCompatActivity() {
            binding.recyclerview.layoutManager = LinearLayoutManager(this)
         recyclerViewAdapter = RecyclerViewAdapter()
         binding.recyclerview.adapter = recyclerViewAdapter
-
     }
     private fun initViewModel(){
          mainActivityViewModel = ViewModelProvider(this).get(MainActivityViewModel::class.java)
