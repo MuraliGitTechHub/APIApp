@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
         binding.recyclerview.adapter = recyclerViewAdapter
 
     }
-    fun initViewModel(){
+    private fun initViewModel(){
          mainActivityViewModel = ViewModelProvider(this).get(MainActivityViewModel::class.java)
          mainActivityViewModel.getLiveDataObserver().observe(this,object : Observer<RecyclerList?>{
 
